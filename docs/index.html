@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <svg id="chart"></svg>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script>
+      const data = [
+        {
+          name: "Banana Production",
+          value: 20223290811,
+        },
+        {
+          name: "Apple Production",
+          value: 8191091088.532,
+        },
+        {
+          name: "Clementine Production",
+          value: 1162341399.19,
+        },
+      ]
+
+      const margin = { top: 20, right: 20, bottom: 70, left: 90 }
+      const width = 600 - margin.left - margin.right
+      const height = 300 - margin.top - margin.bottom
+      const legendWidth = 300
+
+      const svg = d3
+        .select("#chart")
+        .attr("width", width + margin.left + margin.right + legendWidth)
+        .attr("height", height + margin.top + margin.bottom)
+        .attr("aria-labelledby", "bar-chart-title")
+
+      svg
+        .append("text")
+        .attr("x", margin.left)
+        .attr("y", 250)
+        .text("2018 Fruit Production")
+        .attr("id", "bar-chart-title")
+
+      svg
+        .append("text")
+        .text("Legend")
+        .attr("x", width + margin.right + margin.left)
+        .attr("y", 20)
+
+      svg
+        .append("text")
+        .text("B = billion")
+        .attr("x", width + margin.right + margin.left)
+        .attr("y", 40)
+
+      const xValues = []
+      data.map((datum) => xValues.push(datum.name))
+
+      const xScale = d3
+        .scaleBand()
+        .domain(xValues)
+        .range([0, width])
+        .padding(0.1)
+
+      const yValues = []
+      data.map((datum) => yValues.push(datum.value))
+
+      const yScale = d3
+        .scaleLinear()
+        .domain([0, d3.max(yValues)])
+        .range([height, 0])
+
+      const barGroups = svg
+        .append("g")
+        .attr("role", "list")
+        .attr("aria-label", "bar chart")
+        .attr("class", "data")
+        .attr("transform", `translate(${margin.left}, 0)`)
+
+      const barColors = ["#000", "#d35f5f", "#fff"]
+
+      const g = barGroups
+        .selectAll("g")
+        .data(data)
+        .enter()
+        .append("g")
+        .attr("role", "listitem")
+
+      g.append("rect")
+        .attr("fill", (d, i) => barColors[i])
+        .attr("stroke", "#000")
+        .attr("class", "bar")
+        .attr("x", (d) => xScale(d.name))
+        .attr("y", (d) => yScale(d.value))
+        .attr("width", xScale.bandwidth())
+        .attr("height", (d) => height - yScale(d.value))
+
+      const lineItemHeight = 30
+
+      g.append("rect")
+        .attr("fill", (d, i) => barColors[i])
+        .attr("stroke", "#000")
+        .attr("width", 20)
+        .attr("height", 20)
+        .attr("x", width + margin.right)
+        .attr("y", (d, i) => lineItemHeight * (i + 1) + 30)
+
+      g.append("text")
+        .text(
+          (d) => `${d.name} - ${d3.format(".2s")(d.value).replace("G", "B")}`
+        )
+        .attr("x", width + margin.right + 30)
+        .attr("y", (d, i) => lineItemHeight * (i + 1) + 45)
+
+      const xAxis = d3.axisBottom(xScale).tickSize(0)
+
+      svg
+        .append("g")
+        .attr("class", "x-axis")
+        .attr("aria-label", "x axis")
+        .attr("transform", `translate(${margin.left}, ${height})`)
+        .call(xAxis)
+
+      const increment = Math.ceil(d3.max(yValues) / 5)
+      const tickRange = d3.range(0, d3.max(yValues), increment)
+
+      var yAxis = d3
+        .axisLeft(yScale)
+        .tickValues(tickRange)
+        .tickFormat((d) => d3.format(".2s")(d).replace("G", "B"))
+
+      svg
+        .append("g")
+        .attr("class", "y-axis")
+        .attr("aria-label", "y axis")
+        .attr("transform", `translate(${margin.left}, 0)`)
+        .call(yAxis)
+    </script>
+  </body>
+</html>
