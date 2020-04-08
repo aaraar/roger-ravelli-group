@@ -1,4 +1,4 @@
-##Vragen
+## Vragen
 
 - Wij zijn … van cmd.
 
@@ -64,9 +64,8 @@ Gevoel? Ruimte
 
 
 - Wat houdt het werk in als specialist op het gebied van duurzame energie?
-    - Specialist warmte pompen, co2 reductie in nederland over de wereld. Heeft atlassen gemaakt. Werkt met excel maar sindsdien veel moeite om excel met een screenreader te gebruiken. WKO-ATLAS https://wkotool.nl/ 
-https://www.nationaleenergieatlas.nl/kaarten?config=418d0f56-0f0c-4fd4-9001-2ead4e1e22d6??config&gm-x=150000&gm-y=460000&gm-z=3&gm-b=1542632922900,true,1;1554039019221,true,0.8; 
-
+    - Specialist warmte pompen, co2 reductie in nederland over de wereld. Heeft atlassen gemaakt. Werkt met excel maar sindsdien veel moeite om excel met een screenreader te gebruiken. [WKO-ATLAS](https://wkotool.nl/) 
+[WKO](https://www.nationaleenergieatlas.nl/kaarten?config=418d0f56-0f0c-4fd4-9001-2ead4e1e22d6??config&gm-x=150000&gm-y=460000&gm-z=3&gm-b=1542632922900,true,1;1554039019221,true,0.8;)
 - Waar irriteer je je het meeste aan?
     - Dark mode dat ook images/videos invert
     - Text to speech is echt heel vervelend en onmogelijk
@@ -75,13 +74,17 @@ bewustwording
 
 Hoe krijg je nu belangrijke informatie tot je van de overheid en andere instanties bijvoorbeeld?
 
-Accessible D3 charts: 
-https://www.a11ywithlindsey.com/blog/accessibility-d3-bar-charts
+[Accessible D3 charts](https://www.a11ywithlindsey.com/blog/accessibility-d3-bar-charts)
 
-Accessible svg:
-https://css-tricks.com/accessible-svgs/
+[Accessible svg](https://css-tricks.com/accessible-svgs/)
 
-Non-accesible covid data:
-https://informationisbeautiful.net/visualizations/covid-19-coronavirus-infographic-datapack/
-Begrijpt het in eerste instantie niet. “Spaghetti” Struggles om te navigeren van de covid spaghetti terug naar de bongo chat. Verward tussen tabs. Blijft vast op de covid. Weet niet hoe hij een tabblad sluit. Gebruikt chrome? Kent de shortcut niet om tab te sluiten? Weet zich wel “redelijk” te navigeren binnen 1 tab, maar meerdere tabs is een issue. Gebruikt duplicate voor monitors. Heeft een eizo monitor (ColorEdge?). Items op scherm lijken groot. Grote knoppen voor youtube maps en taskbar.  Heeft een rode muiscursor anders ziet hij de muis niet. Kan niet in een keer de gehele grafiek zien. Kan de assen lezen van de spaghetti covid grafiek. Ziet dat singapore en japan laag zijn? Screenreader zegt helemaal niks. 
-Proberen op de iPad. Mail gestuurd en gebruikt siri voiceover om mail te vinden. Ziet wel dat de mail ontvangen is maar gebruikt toch siri?? Siri screenreader weet wel de covid spaghetti site af te lezen maar zegt alleen image dus niet bruikbaar. Vind tabellen makkelijker dan grafieken.
+[Non-accesible covid data](https://informationisbeautiful.net/visualizations/covid-19-coronavirus-infographic-datapack/)
+
+Begrijpt het in eerste instantie niet. “Spaghetti” Struggles om te navigeren van de covid spaghetti terug naar de bongo chat. 
+Verward tussen tabs. Blijft vast op de covid. Weet niet hoe hij een tabblad sluit. Gebruikt chrome? Kent de shortcut niet 
+om tab te sluiten? Weet zich wel “redelijk” te navigeren binnen 1 tab, maar meerdere tabs is een issue. Gebruikt duplicate
+ voor monitors. Heeft een eizo monitor (ColorEdge?). Items op scherm lijken groot. Grote knoppen voor youtube maps en taskbar.     
+ Heeft een rode muiscursor anders ziet hij de muis niet. Kan niet in een keer de gehele grafiek zien. Kan de assen lezen van de spaghetti covid grafiek.
+  Ziet dat singapore en japan laag zijn? Screenreader zegt helemaal niks. 
+Proberen op de iPad. Mail gestuurd en gebruikt siri voiceover om mail te vinden. Ziet wel dat de mail ontvangen is maar
+ gebruikt toch siri?? Siri screenreader weet wel de covid spaghetti site af te lezen maar zegt alleen image dus niet bruikbaar. Vind tabellen makkelijker dan grafieken.
